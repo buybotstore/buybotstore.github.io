@@ -1,5 +1,5 @@
 """
-WSGI config for BuyBots project.
+WSGI config for BuyBots_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BuyBots.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BuyBots_project.settings")
 
 application = get_wsgi_application()
