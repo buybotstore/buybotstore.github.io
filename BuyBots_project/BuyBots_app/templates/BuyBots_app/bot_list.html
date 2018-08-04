@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>BuyBots</title>
+    </head>
+    <body>
+        <h1>BuyBots</h1>
+        {% for bot in bots %}
+        <div>
+            
+            <h1><a href="">{{ bot.name }}</a></h1>
+            <p>Цена:{{bot.price}}</p>
+        </div>
+    {% endfor %}
+    </body>
+</html>

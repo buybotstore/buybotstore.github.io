@@ -1,3 +1,8 @@
 from django.shortcuts import render
-
-# Create your views here.
+from django.utils import timezone
+from .models import Bot
+ 
+def bot_list(request):
+   
+    bots=Bot.objects.filter()
+    return render(request, 'BuyBots_app/bot_list.html', {'bots': bots})
