@@ -1,15 +1,46 @@
+{% load static %}
 <html>
     <head>
         <title>BuyBots</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
     </head>
     <body>
-        <h1>BuyBots</h1>
-        {% for bot in bots %}
-        <div>
-            
-            <h1><a href="{% url 'bot_detail' pk=bot.pk %}">{{ bot.name }}</a></h1>
-            <p>Цена:{{bot.price}}</p>
+        <div class="Head">
+                <h1>BuyBots</h1>
         </div>
-    {% endfor %}
+        <div class="Settings">
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" >
+                          Категория
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </div>
+        </div>
+
+        <div class="row">
+                {% for bot in bots %}
+              
+                        <div class="col-sm-2">
+                <div>
+                                <div class="card" style="width: 10rem;">
+                                <img class="card-img-top" src="..."  >
+                                <div class="card-body">
+                                  <h5 class="card-title">{{ bot.name }} </h5>
+                                  <p class="card-text">Цена:{{bot.price}}</p>
+                                  <a href="{% url 'bot_detail' pk=bot.pk %}"class="btn btn-primary">Подробнее</a>
+                                </div>
+                              </div>
+                    
+                     
+                </div>
+            </div>  
+        
+            {% endfor %}
+</div>
     </body>
 </html>

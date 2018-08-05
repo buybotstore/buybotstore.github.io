@@ -1,0 +1,29 @@
+.Head
+{
+    background-color:#19B5FE;
+    height: 100px;
+}
+.Settings
+{
+    height: 40px;
+    background-color: #E4F1FE;
+}
+.Name
+{     margin-left: 30px;
+
+}
+.Price
+{
+    float: right;
+    margin-right: 30px;
+}
+.Description
+{   float: left;
+    margin-top: 100px;
+    margin-left: 30px;
+}
+.Buy_bot
+{
+    float: right;
+    margin-right: 30px;
+}
