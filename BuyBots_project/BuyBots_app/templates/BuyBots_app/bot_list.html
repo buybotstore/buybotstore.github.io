@@ -7,7 +7,7 @@
         {% for bot in bots %}
         <div>
             
-            <h1><a href="">{{ bot.name }}</a></h1>
+            <h1><a href="{% url 'bot_detail' pk=bot.pk %}">{{ bot.name }}</a></h1>
             <p>Цена:{{bot.price}}</p>
         </div>
     {% endfor %}

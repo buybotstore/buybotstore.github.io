@@ -13,7 +13,8 @@ class Developer(models.Model):
     password = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11)
     email = models.EmailField(max_length=50)
-
+    def __str__(self):
+        return self.full_name
 
 class Deal(models.Model):
     id_admin = models.ForeignKey(Admin, on_delete=models.CASCADE)
@@ -26,7 +27,8 @@ class Bot(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10,decimal_places=3)
     description = models.TextField(max_length=500)
-
+    def __str__(self):
+        return self.name
 
 
 
@@ -37,12 +39,14 @@ class Client(models.Model):
     password = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11)
     email = models.EmailField(max_length=50)
-
+    def __str__(self):
+        return self.full_name
 
 class Purchase(models.Model):
     id_bot = models.ForeignKey(Bot, on_delete=models.CASCADE)
     id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
     date = models.DateField()
+
 
 class Post(models.Model):
     author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
