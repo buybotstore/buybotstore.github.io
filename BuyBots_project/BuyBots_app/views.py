@@ -9,3 +9,6 @@ def bot_list(request):
 def bot_detail(request, pk):
     bots = get_object_or_404(Bot, pk=pk)
     return render(request, 'BuyBots_app/bot_detail.html', {'bots': bots})
+def bot_developer(request, pk):
+    bots = get_object_or_404(Bot, pk=pk)
+    return render(request, 'BuyBots_app/bot_developer.html', {'bots': bots})

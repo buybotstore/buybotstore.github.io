@@ -1,19 +1,27 @@
-.Bot-image
-{
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 150px;
-}
-.Bot-image img
-{
-    width:150;
-    height:150;
-
-}
-.Bot-name
-{   margin-top: 20px;
-    margin-left: 300px;
+.Bot-body
+{   width: 800px;
+    height: 600px;
     float: left;
-    width:150;
-   
+    margin-top:10px;
+    margin-left: 50px;
+} 
+.Bot-names 
+{  
+    
+    font-family: Impact;
+    
+}
+ 
+ 
+.Bot-image
+{   margin-top: 40px;
+    margin-left: 50px;  
+    width: 150px;
+    height: 150px;
+    float: left;
+}
+.Bot-description
+{
+  width: 600;    
+  float: left;
 }

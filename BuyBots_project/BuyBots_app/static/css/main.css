@@ -31,20 +31,20 @@ A {
     height: 250px;
     margin-right: 30px;
     margin-top:  30px; 
-    background-color: #FFFF;
+    background-color: whitesmoke;
     float: left;
     border-radius: 20px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
 }
 .Card-name
-{margin-left: 70px;
+{ 
 
 }
 .Card-name-h3
 {   overflow: hidden;
-    font-family: Cambria;
-    font-size: 10pt;
     text-overflow:  ellipsis;
+    font-family: 'Gill Sans' ;
+    font-size: 10pt;
     width: 120px;
 }
 .Card-image
@@ -54,14 +54,41 @@ A {
     
 }
 .Card-price
-{
-    float: left;
-    width: 60px;
-     
-}
-.Card-more
 {   width: 80px;
-    float: right;
-    margin-bottom: 5px;
+    float: right ;
+    margin-bottom: 20px;
+    
+    overflow: hidden;
+    text-overflow:  ellipsis;
 }
- 
+.Card-price a {
+    border-radius: 20px;
+    width:50px;
+    margin-bottom: 20px;
+    
+    display: inline-block;
+    padding: 5px 10px;  
+     
+    color:white;  
+    background:#59ABE3;
+  }
+.Card-price a:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3); 
+    background: #3498DB;
+   }
+.Card-developer a
+{   text-overflow:  ellipsis;
+    font-size: 10pt;
+    overflow: hidden;
+}
+.Big-card
+{   
+    width: 1100px;
+    height: 600px;
+    margin-right: 30px;
+    margin-top:  30px; 
+    background-color: whitesmoke;
+    float: left;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);  
+}

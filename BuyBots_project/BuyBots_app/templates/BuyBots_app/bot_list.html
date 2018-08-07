@@ -3,15 +3,15 @@
 
 <head>
   <title>BuyBots</title>
-
+  
   <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 
-<body link="blue" vlink="#blue" alink="blue" >
+<body link="blue" vlink="#blue" alink="blue">
   <header class="Head">
     <h1>BuyBots</h1>
   </header>
-   
+
 
   <div class="List">
 
@@ -24,16 +24,20 @@
         <h3 class="Card-name-h3"> {{ bot.name }} </h3>
       </div>
 
+      <div class="Card-developer">
 
-      <div class="Card-price"> Цена:{{bot.price}}</div>
-      <div class="Card-more">
-        <a href="{% url 'bot_detail' pk=bot.pk %}">Подробнее</a>
+        <a>{{bot.id_developer}}</a>
+
+      </div>
+      <div class="Card-price">
+
+        <a   href="{% url 'bot_detail' pk=bot.pk %}"  > {{bot.price}}</a>
+
       </div>
 
     </div>
-   
 
-  {% endfor %}
+    {% endfor %}
   </div>
 </body>
 

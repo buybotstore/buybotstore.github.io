@@ -13,11 +13,29 @@
         <h1>BuyBots</h1>
     </header>
     <div class="List">
-        <div class="Bot-name">
-            <h1>{{bots.name}}</h1>
-        </div>
-        <div class="Bot-image">
-            <img src="{% static bot.image_path %}">
+        <div class="Big-card">
+            <div class="Bot-image">
+                <img src="{% static bots.image_path %}" width="150" height="150">
+            </div>
+            <div class="Bot-body">
+                <div class="Bot-names">
+                    <h1>{{bots.name}} </h1>
+                </div>
+                <div class="Card-developer">
+
+                    <a>{{bots.id_developer}}</a>
+
+                </div>
+                <div class="Card-price">
+
+                    <a>{{bots.price}}</a>
+                </div>
+                <div class="Bot-description">
+                    <p>
+                        {{bots.description}}
+                    </p>
+                </div>
+            </div>
         </div>
 
     </div>
