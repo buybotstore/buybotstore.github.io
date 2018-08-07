@@ -12,5 +12,6 @@ admin.site.register(Client)
 admin.site.register(Bot)
 admin.site.register(Deal)
 admin.site.register(Admin)
+admin.site.register(Purchase)
 admin.site.register(Developer)
  
