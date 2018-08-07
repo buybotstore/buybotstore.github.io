@@ -24,6 +24,7 @@ class Deal(models.Model):
 
 
 class Category(models.Model):
+    
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
 
@@ -32,12 +33,8 @@ class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE)
     id_category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-<<<<<<< HEAD
     image_path=  models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10,decimal_places=3)
-=======
-    price = models.DecimalField(max_digits=10, decimal_places=3)
->>>>>>> 4780dcfe8f9ee413b1d4f343082b645faa2b207c
     description = models.TextField(max_length=500)
 
     def __str__(self):
