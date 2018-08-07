@@ -10,6 +10,7 @@ class Developer(models.Model):
     full_name = models.CharField(max_length=100)
     login = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11)
+    password = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
 
     def __str__(self):
@@ -41,6 +42,7 @@ class Bot(models.Model):
 class Client(models.Model):
     full_name = models.CharField(max_length=100)
     login = models.CharField(max_length=20)
+    password = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11)
     email = models.EmailField(max_length=50)
 
