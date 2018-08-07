@@ -25,6 +25,7 @@ class Deal(models.Model):
 class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
+    image_path=  models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10,decimal_places=3)
     description = models.TextField(max_length=500)
     def __str__(self):

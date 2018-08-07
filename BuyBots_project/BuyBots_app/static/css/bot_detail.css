@@ -1,0 +1,19 @@
+.Bot-image
+{
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 150px;
+}
+.Bot-image img
+{
+    width:150;
+    height:150;
+
+}
+.Bot-name
+{   margin-top: 20px;
+    margin-left: 300px;
+    float: left;
+    width:150;
+   
+}
