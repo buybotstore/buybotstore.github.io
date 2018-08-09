@@ -27,7 +27,8 @@ class Category(models.Model):
     
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
-
+    def __str__(self):
+        return self.name
 
 class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE)

@@ -3,15 +3,22 @@
 
 <head>
     <title>BuyBots</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/bot_detail.css' %}">
 </head>
 
 <body link="blue" vlink="#blue" alink="blue">
-    <header class="Head">
+    <div class="Header">
+
+        <div class="Search-panel">
+            <form action="">
+                <input class="Search-input" type="text">
+            </form>
+        </div>
         <h1>BuyBots</h1>
-    </header>
+    </div>
     <div class="List">
         <div class="Big-card">
             <div class="Bot-image">
@@ -23,7 +30,12 @@
                 </div>
                 <div class="Card-developer">
 
-                    <a>{{bots.id_developer}}</a>
+                    <a href="{% url 'bot_developer' pk=bots.id_developer.pk %}">{{bots.id_developer}}</a>
+
+                </div>
+                <div class="Card-category">
+
+                    <a href="{% url 'bot_category' pk=bots.id_category.pk %}">{{bots.id_category}}</a>
 
                 </div>
                 <div class="Card-price">
@@ -38,6 +50,10 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="Footer">
+        fas
     </div>
 </body>
 
