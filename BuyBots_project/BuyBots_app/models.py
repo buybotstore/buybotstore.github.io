@@ -35,12 +35,7 @@ class Bot(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=3)
     description = models.TextField(max_length=500)
-<<<<<<< HEAD
-    
-=======
     created_date = models.DateTimeField(default=timezone.now)
-
->>>>>>> 06525072b8de6c8e41f1445f6ae4cfa84d5e7e93
     def __str__(self):
         return self.name
 
@@ -51,7 +46,6 @@ class Bot(models.Model):
 
 class Purchase(models.Model):
     id_bot = models.ForeignKey(Bot, on_delete=models.CASCADE)
-<<<<<<< HEAD
     id_client = models.ForeignKey(User, on_delete=models.CASCADE)
     date = models.DateTimeField()
 
@@ -89,7 +83,4 @@ class Response(models.Model):
         self.published_date = timezone.now()
         self.save()
      
-=======
-    id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    date = models.DateTimeField(default=timezone.now)
->>>>>>> 06525072b8de6c8e41f1445f6ae4cfa84d5e7e93
+ 

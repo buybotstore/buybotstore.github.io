@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Bot
-<<<<<<< HEAD
 from .models import Developer
 from .models import Category
 from .models import Comment
@@ -10,18 +9,15 @@ def bot_list(request):
    
     bots=Bot.objects.filter()
      
-=======
 from .add_bot_form import AddBotForm
 
 
 def bot_list(request):
     bots = Bot.objects.filter()
->>>>>>> 06525072b8de6c8e41f1445f6ae4cfa84d5e7e93
     return render(request, 'BuyBots_app/bot_list.html', {'bots': bots})
 
 def bot_detail(request, pk):
     bots = get_object_or_404(Bot, pk=pk)
-<<<<<<< HEAD
     comments=Comment.objects.filter(id_bot=pk)
     return render(request, 'BuyBots_app/bot_detail.html', {'bots': bots,'comments':comments})
 def bot_developer(request, pk):
@@ -35,7 +31,6 @@ def bot_category(request, pk):
 def lk(request ):
     bots=Bot.objects.filter()
     return render(request, 'BuyBots_app/lk.html',{'bots':bots})
-=======
     return render(request, 'BuyBots_app/bot_detail.html', {'bots': bots})
 
 def add_bot(request):
@@ -48,4 +43,3 @@ def add_bot(request):
     else:
         form = AddBotForm()
     return render(request, 'BuyBots_app/add_bot.html', {'form': form})
->>>>>>> 06525072b8de6c8e41f1445f6ae4cfa84d5e7e93
