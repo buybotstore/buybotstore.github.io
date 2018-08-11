@@ -47,7 +47,16 @@
                         {{bots.description}}
                     </p>
                 </div>
+                <div class="Comment-card">
+
+                    <h1> Отзывы</h1>
+                      
+                    {% for comment in comments %}
+                    {{comment.comment}}
+                    {% endfor %}
+                </div>
             </div>
+          
         </div>
 
     </div>
