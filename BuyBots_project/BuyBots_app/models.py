@@ -20,11 +20,10 @@ class Developer(models.Model):
 class Deal(models.Model):
     id_admin = models.ForeignKey(Admin, on_delete=models.CASCADE)
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE)
-    date = models.DateTimeField()
+    date = models.DateTimeField(default=timezone.now)
 
 
 class Category(models.Model):
-    
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
 
@@ -33,9 +32,9 @@ class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE)
     id_category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    image_path=  models.CharField(max_length=100)
-    price = models.DecimalField(max_digits=10,decimal_places=3)
+    price = models.DecimalField(max_digits=10, decimal_places=3)
     description = models.TextField(max_length=500)
+    created_date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
@@ -55,19 +54,4 @@ class Client(models.Model):
 class Purchase(models.Model):
     id_bot = models.ForeignKey(Bot, on_delete=models.CASCADE)
     id_client = models.ForeignKey(Client, on_delete=models.CASCADE)
-    date = models.DateTimeField()
-
-
-class Post(models.Model):
-    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
-    created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
-
-    def publish(self):
-        self.published_date = timezone.now()
-        self.save()
-
-    def __str__(self):
-        return self.title
+    date = models.DateTimeField(default=timezone.now)
