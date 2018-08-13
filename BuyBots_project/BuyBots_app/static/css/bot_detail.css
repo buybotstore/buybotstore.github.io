@@ -5,11 +5,10 @@
     margin-top:10px;
     margin-left: 50px;
 } 
+
 .Bot-names 
-{  
-    
-    font-family: Impact;
-    
+{      
+    font-family: Impact; 
 }
  
  
@@ -20,8 +19,17 @@
     height: 150px;
     float: left;
 }
+
 .Bot-description
 {
   width: 600;    
   float: left;
 }
+<<<<<<< HEAD
+=======
+
+.Comment-card
+{   width: 1000px;
+    float: left;
+}
+>>>>>>> 9277c8f555a92d9bbb2538f56b52f137c090aa5d

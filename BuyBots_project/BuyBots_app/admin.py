@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Post
 from .models import Bot
 from .models import Deal
 from .models import Admin
@@ -9,7 +8,6 @@ from .models import Category
 from .models import Comment
 from .models import Response
 
-admin.site.register(Post)
 admin.site.register(Bot)
 admin.site.register(Deal)
 admin.site.register(Admin)
