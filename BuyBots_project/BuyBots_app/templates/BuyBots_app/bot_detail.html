@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/bot_detail.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tcomments.css' %}">
 </head>
 
 <body link="blue" vlink="#blue" alink="blue">
@@ -20,6 +21,7 @@
         <h1>BuyBots</h1>
     </div>
     <div class="List">
+
         <div class="Big-card">
             <div class="Bot-image">
                 <img src="{% static bots.image_path %}" width="150" height="150">
@@ -47,16 +49,33 @@
                         {{bots.description}}
                     </p>
                 </div>
-                <div class="Comment-card">
 
-                    <h1> Отзывы</h1>
-                      
-                    {% for comment in comments %}
-                    {{comment.comment}}
-                    {% endfor %}
+            </div>
+
+        </div>
+        <div class="Big-card">
+            <h1> Отзывы</h1>
+
+
+
+            {% for comment in comments %}
+            <div class="Comment-card">
+
+                <div class="User-image">
+                    <img src="{% static bots.image_path %}" width="50" height="50">
+                </div>
+                <div class="Name-of-the-commentator">
+                    <h2> {{comment.id_user}}</h4>
+                </div>
+                
+
+                <div class="Comment">
+                    <p> {{comment.comment}}</p>
                 </div>
             </div>
-          
+            {% endfor %}
+
+
         </div>
 
     </div>

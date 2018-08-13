@@ -1,6 +1,6 @@
 .Bot-body
 {   width: 800px;
-    height: 600px;
+    height: 300px;
     float: left;
     margin-top:10px;
     margin-left: 50px;
@@ -24,8 +24,4 @@
 {
   width: 600;    
   float: left;
-}
-.Comment-card
-{   width: 1000px;
-    float: left;
 }
