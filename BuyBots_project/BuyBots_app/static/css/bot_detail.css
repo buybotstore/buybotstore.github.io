@@ -5,11 +5,10 @@
     margin-top:10px;
     margin-left: 50px;
 } 
+
 .Bot-names 
-{  
-    
-    font-family: Impact;
-    
+{      
+    font-family: Impact; 
 }
  
  
@@ -20,11 +19,13 @@
     height: 150px;
     float: left;
 }
+
 .Bot-description
 {
   width: 600;    
   float: left;
 }
+
 .Comment-card
 {   width: 1000px;
     float: left;

@@ -2,34 +2,43 @@ body
 { background-color:white;
   margin: 0;
   margin: 0 auto; border-spacing: 0; padding: 0;
-  font-family: 'Open Sans Condensed', sans-serif;}
+  font-family: 'Open Sans Condensed', sans-serif;
+}
 
 A 
 {
     color: blue; /* Цвет ссылок */
     text-decoration: none;
 }
+
 A:visited 
 {
     color: blue; /* Цвет посещенных ссылок */
 }
-A:active {
+
+A:active 
+{
     color: blue; /* Цвет активных ссылок */
-         }
+}
+
 .Header
-{  float:left;
-     top:0;
+{  
+    float:left;
+    top:0;
     position: absolute;
     background-color: #2ECC71;
     width: 100%;
     height: 100px;   /* Высота блока footer */
 }
+
 .Header h1
-{   height: 50px;
+{   
+    height: 50px;
     width: 100px;
     position: absolute;
     top:0;
 }
+
 .Search-panel
 {
     float: left;
@@ -38,8 +47,8 @@ A:active {
     width: 600px;
     margin-top: 30px;
     height: 40px;
-
 }
+
 .Search-input
 {   width:1000px;
     border-radius: 20px;
@@ -52,6 +61,7 @@ A:active {
     margin-right: 100px;
     margin-bottom: 50px;
 }
+
 .Card
 {   width: 250px;
     height: 250px;
@@ -63,10 +73,12 @@ A:active {
     border-radius: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);
 }
+
 .Card-name
 { 
 
 }
+
 .Card-name-h3
 {   overflow: hidden;
     text-overflow:  ellipsis;
@@ -74,21 +86,22 @@ A:active {
     font-size: 10pt;
     width: 120px;
 }
+
 .Card-image
 {   margin-top: 10px;
-    margin-left: 50px;
-  
-    
+    margin-left: 50px;    
 }
+
 .Card-price
 {   width: 80px;
     float: right ;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;    
     overflow: hidden;
     text-overflow:  ellipsis;
 }
-.Card-price a {
+
+.Card-price a 
+{
     border-radius: 20px;
     width:50px;
     margin-bottom: 20px;
@@ -99,29 +112,37 @@ A:active {
     color:white;  
     background:#59ABE3;
   }
-.Card-price a:hover {
+
+.Card-price a:hover 
+{
     box-shadow: 0 0 5px rgba(0,0,0,0.3); 
     background: #3498DB;
-   }
+}
+
 .Card-developer a
-{   text-overflow:  ellipsis;
+{   
+    text-overflow:  ellipsis;
     font-size: 10pt;
     overflow: hidden;
 }
+
 .Card-category a
 {    
     text-overflow:  ellipsis;
     font-size: 10pt;
     overflow: hidden;
 }
+
 .Card-developer
 {    float: left;
     width: 100px;
 }
+
 .Card-category
 {   float: left;
     width: 100px;
 }
+
 .Big-card
 {   
     width: 1100px;
@@ -133,9 +154,9 @@ A:active {
     border-radius: 20px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 20px 20px rgba(0,0,0,0.22);  
 }
+
 .Footer
 {    
-   
     float: left;
     width: 100%;
     height: 50px;
