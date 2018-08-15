@@ -27,17 +27,20 @@ def bot_category(request, pk):
     bots = Bot.objects.filter(id_category=pk)
     return render(request, 'BuyBots_app/bot_category.html', {'category': category, 'bots': bots})
 
-def lk(request):
+def private_cabinet(request):
+    '''Личный кабинет для разработчика'''
     bots = Bot.objects.filter()
-    return render(request, 'BuyBots_app/lk.html', {'bots': bots})    
+    return render(request, 'BuyBots_app/private_cabinet.html', {'bots': bots})    
 
 def add_bot(request):
-    if request.method == "POST":
-        form = AddBotForm(request.POST)
-        if form.is_valid():
-            bot = form.save(commit=False)
-            bot.developer = request.user
-            bot.save()
-    else:
-        form = AddBotForm()
-    return render(request, 'BuyBots_app/add_bot.html', {'form': form})
+    '''Представления для добавления бота'''
+    if request.method == "POST": # если данные были переданы
+        form = AddBotForm(request.POST) # инициализируем форму с этими данными
+        if form.is_valid(): # если форма корректна
+            bot = form.save(commit=False) # сохраняем форму, но указав commit=False, не сохраняем модель
+            bot.developer = request.user # потому что сначала добавим недостоющее поле - разработчик
+            bot.save() # сохраняем модель
+    else: # если же данные не были переданы
+        form = AddBotForm() # создаем пустую форму
+    return render(request, 'BuyBots_app/add_bot.html', {'form': form}) # возвращаем html-страницу
+
