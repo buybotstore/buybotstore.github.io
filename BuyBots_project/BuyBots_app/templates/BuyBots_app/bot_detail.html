@@ -32,12 +32,12 @@
                 </div>
                 <div class="Card-developer">
 
-                    <a href="{% url 'bot_developer' pk=bots.id_developer.pk %}">{{bots.id_developer}}</a>
+                    <a href="{% url 'bot_developer' developer=bots.id_developer %}">{{bots.id_developer}}</a>
 
                 </div>
                 <div class="Card-category">
 
-                    <a href="{% url 'bot_category' pk=bots.id_category.pk %}">{{bots.id_category}}</a>
+                    <a href="{% url 'bot_category' name_category=bots.id_category  %}">{{bots.id_category}}</a>
 
                 </div>
                 <div class="Card-price">
@@ -64,13 +64,20 @@
                 <div class="User-image">
                     <img src="{% static bots.image_path %}" width="50" height="50">
                 </div>
-                <div class="Name-of-the-commentator">
-                    <h2> {{comment.id_user}}</h4>
+                <div class="Comment-head">
+                    <div class=".Name-of-the-commentator">
+                        {{comment.id_user}}
+                    </div>
                 </div>
-                
-
-                <div class="Comment">
-                    <p> {{comment.comment}}</p>
+                <div class="Comment-mid">
+                    <div class=".Comment-date">
+                        {{comment.published_date}}
+                    </div>
+                </div>
+                <div class="Comment-body">
+                    <p>
+                        {{comment.comment}}
+                    </p>
                 </div>
             </div>
             {% endfor %}

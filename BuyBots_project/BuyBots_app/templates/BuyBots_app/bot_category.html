@@ -39,12 +39,12 @@
 
             <div class="Card-developer">
 
-                <a href="{% url 'bot_developer' pk=bot.id_developer.pk %}">{{bot.id_developer}}</a>
+                <a href="{% url  'bot_developer' developer=bot.id_developer %}">{{bot.id_developer}}</a>
 
             </div>
             <div class="Card-price">
 
-                <a href="{% url 'bot_detail' pk=bot.pk %}"> {{bot.price}}</a>
+                <a href="{% url 'bot_detail' en_name=bot.en_name %}"> {{bot.price}}</a>
 
             </div>
 
