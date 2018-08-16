@@ -37,8 +37,10 @@ def bot_category(request, name_category):
     )
 
 
-def lk(request):
+def private_cabinet(request):
+    '''Личный кабинет для разработчика'''
     bots = Bot.objects.filter()
+<<<<<<< HEAD
     return render(request, "BuyBots_app/lk.html", {"bots": bots})
 
 
@@ -53,3 +55,19 @@ def add_bot(request):
     else:
         form = AddBotForm()
     return render(request, "BuyBots_app/add_bot.html", {"form": form})
+=======
+    return render(request, 'BuyBots_app/private_cabinet.html', {'bots': bots})    
+
+def add_bot(request):
+    '''Представления для добавления бота'''
+    if request.method == "POST": # если данные были переданы
+        form = AddBotForm(request.POST) # инициализируем форму с этими данными
+        if form.is_valid(): # если форма корректна
+            bot = form.save(commit=False) # сохраняем форму, но указав commit=False, не сохраняем модель
+            bot.developer = request.user # потому что сначала добавим недостоющее поле - разработчик
+            bot.save() # сохраняем модель
+    else: # если же данные не были переданы
+        form = AddBotForm() # создаем пустую форму
+    return render(request, 'BuyBots_app/add_bot.html', {'form': form}) # возвращаем html-страницу
+
+>>>>>>> a43202a89ab6e17bc0b15dfb5a01e11f36bdf040
