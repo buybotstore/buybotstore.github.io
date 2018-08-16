@@ -28,7 +28,7 @@
             </div>
             <div class="Bot-body">
                 <div class="Bot-names">
-                    <h1>{{bots.name}} </h1>
+                    <h1>{{bots.name_bot}} </h1>
                 </div>
                 <div class="Card-developer">
 
@@ -37,7 +37,7 @@
                 </div>
                 <div class="Card-category">
 
-                    <a href="{% url 'bot_category' name_category=bots.id_category  %}">{{bots.id_category}}</a>
+                    <a href="{% url 'bot_category' name_category=bots.name_category  %}">{{bots.name_category}}</a>
 
                 </div>
                 <div class="Card-price">

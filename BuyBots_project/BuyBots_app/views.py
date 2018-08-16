@@ -30,8 +30,8 @@ def bot_developer(request, developer):
 
 
 def bot_category(request, name_category):
-    category = get_object_or_404(Category, name=name_category)
-    bots = Bot.objects.filter(id_category=category.pk)
+    category = get_object_or_404(Category, name_category=name_category)
+    bots = Bot.objects.filter(name_category=category.pk)
     return render(
         request, "BuyBots_app/bot_category.html", {"category": category, "bots": bots}
     )
@@ -40,22 +40,6 @@ def bot_category(request, name_category):
 def private_cabinet(request):
     '''Личный кабинет для разработчика'''
     bots = Bot.objects.filter()
-<<<<<<< HEAD
-    return render(request, "BuyBots_app/lk.html", {"bots": bots})
-
-
-def add_bot(request):
-
-    if request.method == "POST":
-        form = AddBotForm(request.POST)
-        if form.is_valid():
-            bot = form.save(commit=False)
-            bot.developer = request.user
-            bot.save()
-    else:
-        form = AddBotForm()
-    return render(request, "BuyBots_app/add_bot.html", {"form": form})
-=======
     return render(request, 'BuyBots_app/private_cabinet.html', {'bots': bots})    
 
 def add_bot(request):
@@ -70,4 +54,3 @@ def add_bot(request):
         form = AddBotForm() # создаем пустую форму
     return render(request, 'BuyBots_app/add_bot.html', {'form': form}) # возвращаем html-страницу
 
->>>>>>> a43202a89ab6e17bc0b15dfb5a01e11f36bdf040

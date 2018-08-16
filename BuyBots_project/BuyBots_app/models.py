@@ -35,14 +35,9 @@ class Category(models.Model):
 
 class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE, null=True)
-<<<<<<< HEAD
-    id_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
-    name = models.CharField(max_length=100)
-    en_name= models.CharField(max_length=100)
-=======
-    name_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     name_bot = models.CharField(max_length=100)
->>>>>>> a43202a89ab6e17bc0b15dfb5a01e11f36bdf040
+    en_name= models.CharField(max_length=100)
+    name_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=3)
     description = models.TextField(max_length=500)
     created_date = models.DateTimeField(default=timezone.now)
