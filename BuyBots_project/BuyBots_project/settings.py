@@ -68,7 +68,9 @@ TEMPLATES = [
         },
     },
 ]
-
+GRAPHENE = {
+    'SCHEMA': 'BuyBots_app.schema.schema' # Where your Graphene schema lives
+}
 WSGI_APPLICATION = 'BuyBots_project.wsgi.application'
 
 

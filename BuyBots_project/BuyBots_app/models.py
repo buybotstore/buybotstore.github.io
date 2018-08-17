@@ -9,7 +9,7 @@ class Admin(models.Model):
 
 class Developer(models.Model):
     full_name = models.CharField(max_length=100)
-    en_full_name= models.CharField(max_length=100)
+    en_full_name = models.CharField(max_length=100)
     login = models.CharField(max_length=20)
     password = models.CharField(max_length=20)
     phone_number = models.CharField(max_length=11)
@@ -36,7 +36,7 @@ class Category(models.Model):
 class Bot(models.Model):
     id_developer = models.ForeignKey(Developer, on_delete=models.CASCADE, null=True)
     name_bot = models.CharField(max_length=100)
-    en_name= models.CharField(max_length=100)
+    en_name = models.CharField(max_length=100)
     name_category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=3)
     description = models.TextField(max_length=500)
@@ -64,13 +64,19 @@ class Comment(models.Model):
         self.save()
 
 
+class users_token(models.Model):
+    id_user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_token = models.CharField(max_length=200)
+
+
 class Response(models.Model):
     id_comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
     comment = models.CharField(max_length=200)
     published_date = models.DateTimeField(blank=True, null=True)
-    
+
     def publish(self):
         self.published_date = timezone.now()
         self.save()
-     
- 
+class UserModel(models.Model):
+    name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
